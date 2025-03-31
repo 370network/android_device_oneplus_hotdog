@@ -24,4 +24,6 @@ export VENDOR=oneplus
 
 export DEVICE_BRINGUP_YEAR=2019
 
+export PRODUCT_ENFORCE_VINTF_MANIFEST=false
+
 "./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
