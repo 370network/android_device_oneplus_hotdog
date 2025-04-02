@@ -8,10 +8,7 @@
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
 
 boot							/boot                  emmc    defaults                                             defaults
-/dev/mapper/dynpart-product_a                                                 /product               ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 /dev/block/sde11			/boot                  emmc    defaults                                             defaults
-/dev/mapper/dynpart-vendor_a                                                  /vendor                ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
-/dev/mapper/dynpart-odm_a                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
 /dev/block/sda20                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount
 /dev/block/sda22                  /data                  ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard latemount,wait,check,formattable,fileencryption=ice,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M,checkpoint=block
 #/devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1       vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
