@@ -8,7 +8,6 @@
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
 
 boot							/boot                  emmc    defaults                                             defaults
-/dev/mapper/dynpart-system_a                                                  /system_root                ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 /dev/mapper/dynpart-product_a                                                 /product               ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 /dev/block/sde11			/boot                  emmc    defaults                                             defaults
 /dev/mapper/dynpart-vendor_a                                                  /vendor                ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
