@@ -9,16 +9,16 @@
 
 boot							/boot                  emmc    defaults                                             defaults
 /dev/block/sde11			/boot                  emmc    defaults                                             defaults
-/dev/block/sda20                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount
+/dev/sda20                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount
 /dev/block/sda22                  /data                  ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard latemount,wait,check,formattable,fileencryption=ice,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M,checkpoint=block
 #/devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1       vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
 #/devices/platform/soc/1da4000.ufshc_card/host*          /storage/sdcard1       vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
-/dev/block/sde4                     /vendor/firmware_mnt   vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait,slotselect
-/dev/block/sde9                      /vendor/dsp            ext4    ro,nosuid,nodev,barrier=1                            wait,slotselect
-/dev/block/sda2                   /mnt/vendor/persist    ext4    noatime,nosuid,nodev,barrier=1                       wait
-/dev/block/sde5                 /vendor/bt_firmware    vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait,slotselect
+/dev/sde4                     /vendor/firmware_mnt   vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait,slotselect
+/dev/sde9                      /vendor/dsp            ext4    ro,nosuid,nodev,barrier=1                            wait,slotselect
+/dev/sda2                   /mnt/vendor/persist    ext4    noatime,nosuid,nodev,barrier=1                       wait
+/dev/sde5                 /vendor/bt_firmware    vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait,slotselect
 # Need to have this entry in here even though the mount point itself is no longer needed.
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
-/dev/block/sda3                      /misc                  emmc    defaults                                             defaults
+/dev/sda3                      /misc                  emmc    defaults                                             defaults
 /devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*    /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
